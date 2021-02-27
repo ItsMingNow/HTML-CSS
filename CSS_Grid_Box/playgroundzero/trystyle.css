@@ -1,0 +1,37 @@
+.container{
+    color: white;
+    display: grid;
+    max-width: 50rem;
+    text-align: center;
+    margin: 0 auto;
+    grid-gap: 10px;
+    padding: 20px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, minmax(150px, auto));
+}
+
+.container div {
+    background-color: turquoise;
+    padding: 50px;
+}
+
+.container div:nth-child(even) {
+    background-color: gray;
+}
+
+.one {
+    grid-column: 1/7;
+}
+
+.two{
+    grid-row: 2/6;
+}
+
+.three {
+    grid-column: 2/7;
+    grid-row: 2/6;
+}
+
+.four {
+    grid-column: 1/7;
+}

@@ -1,0 +1,16 @@
+* {
+    /* display: flexbox; */
+    margin: 0;
+}
+body {
+    background-color: bisque;
+}
+
+.container {
+    /* background-color: white; */
+    display: grid;
+    border-style: dashed;
+    /* margin: auto; */
+    justify-items: center;
+    padding: 0%;
+}

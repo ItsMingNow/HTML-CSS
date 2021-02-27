@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 2</title>
+    <style>
+        body {
+            color: beige;
+            display: grid;
+            text-align: center;
+            margin: 0 auto;
+            grid-gap: 10px;
+        }
+        .container {
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(12, minmax(200px, auto));
+            grid-column-gap: 10px;
+            grid-row-gap: 5px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .container div{
+            background: turquoise;
+            grid-column: 1/6;
+            grid-row: 5/7
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <form action="#" method="get">
+                <Label for="firstName">First Name</Label>
+                <input type="text" name="firstName" id="firstName">
+                <label for="lastName">Last Name</label>
+                <input type="text" name="lastName" id="lastName">
+                <label for="email">email</label>
+                <input type="email" name="email" id="email">
+            </form>
+        </div>
+        
+    </div>
+</body>
+</html>
