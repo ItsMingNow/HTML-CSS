@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Card</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;800&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fad390;  
+            font-family: Poppins;
+        }
+
+        .card {
+            max-width: 300px;
+            width: 100%;
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: .4s dubic-bezier(.175,.885,0,1);
+            box-shadow: 0 13px 10px -7px rgba(0,0,0,.1);
+            background: #fff;
+        }
+
+        .card:hover {
+            box-shadow: 0 30px 18px -8px rgba(0, 0, 0, .1);
+            transform: scale(1.1,1.1);
+        }
+
+        .card_hover {
+            position: absolute;
+            padding: 16px;
+            width: 100%;
+            opacity: 0;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card_link{
+            color: #e74c3c;
+        }
+
+        .card_time {
+            display: flex;
+            align-items: center;
+        }
+
+        .card_time span {
+            font-size: 12px;
+            color: #000;
+            margin-left: 5px;
+        }
+
+        .card_container {
+            display: flex;
+            height: 235px;;
+        }
+
+        .card_img {
+            transition: .2s;
+            background-size:  cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            position: absolute;
+            height: 235px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            top: 0;
+        }
+
+        .card_info {
+            background: #fff;
+            z-index: 2;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            padding: 15px 25px 25px 25px;
+        }
+
+        .card_category {
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 2px;
+            font-weight: 500;
+            color: #868686
+        }
+
+        .card_title {
+            margin-top: 5px;
+            font-weight: 500;
+            color: #000;
+        }
+
+        .card_author {
+            font-weight: 600;
+            text-decoration: none;
+            color: #AD7D52;
+        }
+
+        .card_by {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .card:hover .card_img {
+            height: 100%;
+            opacity: .3;
+        }
+
+        .card:hover .card_info {
+            background: transparent;
+            position: relative;
+        }
+
+        .card:hover .card_hover{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card_hover">
+            <a href="#" class="card_link"> 
+                <i class="fa fa-heart"></i>
+            </a>
+            <div class="card_time">
+                <i class="fa fa-clock-o"></i>
+                <span>5 min</span>
+            </div>  
+        </div>
+        <a href="#" class="card_container">
+            <div class="card_img" style="background-image: url(https://images.unsplash.com/photo-1530878955558-a6c31b9c97db?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80);">
+            </div>
+        </a>
+        <div class="card_info">
+            <span class="card_category">Travel</span>
+            <h3 class="card_title">Discover the SMELLS</h3>
+            <span class="card_by">by <a href="#" class="card_author">Jimmy Yu</a></span>
+        </div>
+    </div>
+</body>
+</html>
