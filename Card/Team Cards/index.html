@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Card</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Poppins;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #34495e;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 300px;
+      height: 300px;
+      position: relative;
+      display: flex;
+      margin: 40px;
+    }
+
+    .card__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: .5s;
+      z-index: 2;
+    }
+
+    .card__img img {
+      position: absolute;
+      text-transform: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: .5s;
+      z-index: 2;
+      object-fit: cover;
+    }
+
+    .card_body {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: .5s;
+      background: #fff;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 15px;
+    }
+
+    .card__body h2 {
+      font-size: 20px;
+      color: #333;
+      line-height: 20px;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .card__body span {
+      font-size: 14px;
+      font-weight: 300;
+    }
+
+    .card:hover .card__img {
+      transform: translate(30px, -35px);
+    }
+
+    .card:hover .card__body {
+      transform: translate(-30px, 35px);
+    }
+
+    @media screen and (max-width: 768px) {
+      .card:hover .card__img {
+        transform: translate(0, -35px);
+      }
+
+      .card:hover .card__body {
+        transform: translate(0, 35px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card__img">
+        <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/62131356_10159260117322524_2358916641644871680_n.jpg?_nc_cat=104&ccb=3&_nc_sid=09cbfe&_nc_ohc=tpf1iC2BedgAX-o9-Ic&_nc_ht=scontent-lax3-1.xx&oh=36b274f601f0c3b6c6d1d365a2daf116&oe=6063B4ED" alt="">
+      </div>
+      <div class="card_body">
+        <h2>name</h2>
+        <span>Position</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card__img">
+        <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/38935353_10158369674282524_8877412897903345664_o.jpg?_nc_cat=102&ccb=3&_nc_sid=174925&_nc_ohc=acQQ3ygmGLEAX_vf1Di&_nc_ht=scontent-lax3-1.xx&oh=c7b5a7434230912be233014bdd9080c7&oe=60605025" alt="">
+      </div>
+      <div class="card_body">
+        <h2>name</h2>
+        <span>Position</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card__img">
+        <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/969514_10152301847712524_1886282299_n.jpg?_nc_cat=100&ccb=3&_nc_sid=de6eea&_nc_ohc=xEm7kTZl0TUAX--e29t&_nc_ht=scontent-lax3-1.xx&oh=4880ed2d6b86cd50715f1af60c1e262e&oe=60637D0F" alt="">
+      </div>
+      <div class="card_body">
+        <h2>name</h2>
+        <span>Position</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
