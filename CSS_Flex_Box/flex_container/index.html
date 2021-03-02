@@ -22,23 +22,26 @@
         .flex-container {
             display: flex;
             background: rgba(128, 128, 128, 0.322);
+            flex-wrap: wrap;
+            /* flex-wrap: wrap-reverse; */
         }
 
         .box {
             height: 100px;
-            min-width: 100px;
+            flex-basis: 500px;
+            /* flex-grow: 1; */
         }
         .one {
             background: aqua;
-            flex-grow: 1;
+            /* flex-basis: 100px; */
         }
         .two {
             background: blueviolet;
-            flex-grow: 2;
+            /* flex-basis: 200px; */
         }
         .three {
             background: burlywood;
-            flex-grow: 3;
+            /* flex-basis: 300px; */
         }
     </style>
 </head>
