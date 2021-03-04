@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12 column grid practice</title>
+  <style>
+    * {
+      margin: 0;
+    }
+    .container {
+      background: cornflowerblue;
+      text-align: center;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: minmax(100px,auto);
+      padding: 20px;
+      grid-gap: 10px;
+    }
+    .container div{
+      background: chartreuse;
+    }
+    .container div:nth-child(even){
+      background: chocolate;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="one" id="one">One</div>
+    <div class="two" id="two">Two</div>
+    <div class="three">Three</div>
+    <div class="four">Four</div>
+    <div class="five">Five</div>
+    <div class="six">Six</div>
+    <div class="seven">Seven</div>
+    <div class="eight">Eight</div>
+    <div class="nine">Nine</div>
+    <div class="ten">Ten</div>
+    <div class="eleven">Eleven</div>
+    <div class="twelve">Twelve</div>
+  </div>
+  <script>
+    document.getElementById("one").innerHTML = "1"
+    document.getElementById("two").innerHTML = "TWO"
+
+    var div = document.getElementsByTagName("div");
+
+    document.getElementById("one").innerHTML = div[2].innerHTML;
+  </script>
+</body>
+</html>
